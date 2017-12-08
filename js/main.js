@@ -4,14 +4,16 @@
 var carInfo = document.querySelectorAll('.data-ref');
 const httpRequest = new XMLHttpRequest();
 
-// function changeCars2(){
-//   const url =  './includes/functions.php?carModel=' + this.id;
-//   fetch (url)
-//   .then((resp)=> resp.json())
-//   .then((data)=> {processResult(data);})
-//   .catch(function (error){
-//     console.log(error);
-//   });
+ function changeCars2(){
+  const url =  './includes/functions.php?carModel=' + this.id;
+
+  fetch (url)
+  .then((resp)=> resp.json())
+   .then((data)=> {processResult(data); })
+   .catch(function (error){
+    console.log(error);
+   });
+ }
   /*// set up AJAX call => handle errors first
   if (!httpRequest){
     alert('giving up not working');
